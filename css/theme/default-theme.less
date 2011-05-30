@@ -12,8 +12,58 @@
 
 /* App-specific stylings */
 
+html {
+    background-color: @ok2;
+}
+
 body {
     font-family: arial, sans-serif;
+    width: 1280px;
+}
+
+@media only screen and (min-width: 960px) and (max-width: 1279px) {
+    body {
+        width: 960px;
+    }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 959px) {
+    body {
+        width: 640px;
+    }
+}
+/* Header */
+
+body > header {
+    .header;
+    .logo {
+        position: absolute;
+        top: 25px;
+        line-height: 50px;
+    }
+
+    nav {
+        right: 10px;
+        li {
+            width: 100px;
+
+            a {
+                width: 100px;
+                line-height: 50px;
+                font-size: 20px;
+                border: 1px solid #aaa;
+            }
+        }
+    }
+}
+
+
+/* Footer */
+
+body > footer {
+    .column-set;
+    max-width: 640px;
+    margin: 0 auto;
 }
 
 /* Button */

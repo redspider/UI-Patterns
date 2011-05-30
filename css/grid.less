@@ -1,0 +1,36 @@
+/* Grid */
+
+.flex-horiz {
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+
+    display: -moz-box;
+    -moz-box-orient: horizontal;
+    -moz-box-pack: center;
+    -moz-box-align: center;
+
+    display: box;
+    box-orient: horizontal;
+    box-pack: center;
+    box-align: center;
+}
+
+.flex {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+}
+
+/* Ok, this is a bit experimental. What we do is create a column-set class that uses flex */
+
+.column-set {
+    .flex-horiz;
+}
+
+/* And for columns, we just make them flex */
+
+.column {
+    .flex;
+}
