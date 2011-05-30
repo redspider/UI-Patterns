@@ -1,0 +1,138 @@
+/* Colours */
+@dark1: #444;
+@dark1_highlight: #333;
+
+@dark2: #f0f0f0;
+
+@ok2: #ccccff;
+@ok1: #66cc00;
+@error2:#ff6600;
+@error1: #cc0000;
+
+
+/* App-specific stylings */
+
+body {
+    font-family: arial, sans-serif;
+}
+
+/* Button */
+.button {
+    background-color: @dark1;
+    color: white;
+    &:hover {
+        background-color: @dark1_highlight;
+    }
+}
+
+
+/* Status */
+.status.note {
+    background-color: @ok2;
+}
+.status.success {
+    background-color: @ok1;
+}
+.status.warning {
+    background-color: @error2
+}
+.status.error {
+    background-color: @error1;
+}
+
+/* Table */
+.data-table {
+    th {
+        background-color: @dark1;
+        color: white;
+    }
+    tr:nth-child(even) {
+        background-color: @dark2;
+    }
+
+    td {
+        border-right: 1px solid @dark1;
+    }
+    border: 1px solid @dark1;
+}
+
+/* Form */
+.form {
+    label {
+        display: block;
+    }
+
+    input[type=text] {
+        display: block;
+        border: 1px solid @dark1;
+    }
+
+    .hint {
+        color: @dark1_highlight;
+    }
+
+    .errors {
+        background-color: @error1;
+        color: white;
+    }
+
+    .error {
+        label {
+            color: @error1;
+        }
+
+        input[type=text] {
+            border: 1px solid @error1;
+        }
+    }
+}
+
+/* Popup */
+
+.popup {
+    background-color: white;
+    border: 8px solid @dark1;
+    .border-radius(10px);
+
+    header {
+        background-color: @dark1;
+        color: white;
+    }
+
+    section {
+        padding: 5px;
+    }
+
+    footer {
+        border-top: 1px solid #eee;
+
+        button {
+            .button;
+        }
+    }
+}
+
+/* Tabs */
+.tab-selector {
+    border-bottom: 1px solid #eee;
+}
+
+.tab-selector li a {
+    position: relative;
+    top: 1px;
+    border-top: 1px solid #eee;
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    background-color: #aaa;
+}
+
+.tab-selector li a.active {
+    background-color: white;
+}
+
+.tab-content {
+    background-color: white;
+}
