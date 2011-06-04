@@ -13,7 +13,7 @@
 /* App-specific stylings */
 
 html {
-    background-color: @ok2;
+    background-color: blue;
 }
 
 body {
@@ -44,14 +44,18 @@ body > header {
 
     nav {
         right: 10px;
-        li {
-            width: 100px;
+        ul {
+            list-style: none;
 
-            a {
+            li {
                 width: 100px;
-                line-height: 50px;
-                font-size: 20px;
-                border: 1px solid #aaa;
+
+                a {
+                    width: 100px;
+                    line-height: 50px;
+                    font-size: 20px;
+                    border: 1px solid #aaa;
+                }
             }
         }
     }
@@ -64,16 +68,12 @@ body > footer {
     .column-set;
     max-width: 640px;
     margin: 0 auto;
-}
 
-/* Button */
-.button {
-    background-color: @dark1;
-    color: white;
-    &:hover {
-        background-color: @dark1_highlight;
+    ul {
+        list-style: none;
     }
 }
+
 
 
 /* Status */
@@ -92,10 +92,13 @@ body > footer {
 
 /* Table */
 .data-table {
+    border: 1px solid @dark1;
+
     th {
         background-color: @dark1;
         color: white;
     }
+
     tr:nth-child(even) {
         background-color: @dark2;
     }
@@ -103,7 +106,6 @@ body > footer {
     td {
         border-right: 1px solid @dark1;
     }
-    border: 1px solid @dark1;
 }
 
 /* Form */

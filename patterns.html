@@ -6,6 +6,10 @@
         <link rel="stylesheet/less" type="text/css" href="css/blueprint.less" />
 
         <script src="js/less.js" type="text/javascript"></script>
+        <script type="text/javascript" charset="utf-8">
+            less.env = "development";
+            less.watch();
+        </script>
     </head>
     <body>
         <header>
@@ -50,9 +54,44 @@
             <div>
                 <button class="button small">.button-small</button>
             </div>
-            <div class="">
+            <div>
                 <button class="button huge">.button-huge</button>
             </div>
+            <div>
+                <button class="button">without icon</button> <button class="button icon home">with icon</button>
+            </div>
+            <div>
+                <button class="button huge icon headphones">with icon</button>
+            </div>
+            <div class="button-group">
+                <a href="#" class="button primary">Dashboard</a>
+                <a href="#" class="button">Inbox</a>
+                <a href="#" class="button">Account</a>
+                <a href="#" class="button">Logout</a>
+            </div>
+
+            <div class="actions button-container">
+                <a href="#" class="button primary">Compose new</a>
+
+                <div class="button-group">
+                    <a href="#" class="button primary">Archive</a>
+                    <a href="#" class="button">Report spam</a>
+                    <a href="#" class="button danger">Delete</a>
+                </div>
+
+                <div class="button-group minor-group">
+                    <a href="#" class="button">Move to</a>
+                    <a href="#" class="button">Labels</a>
+                </div>
+            </div>
+
+            <ul class="button-group">
+                <li><a href="#" class="button primary pill">Dashboard</a></li>
+                <li><a href="#" class="button pill">Inbox</a></li>
+                <li><a href="#" class="button pill">Account</a></li>
+                <li><a href="#" class="button pill">Logout</a></li>
+            </ul>
+
         </section>
         <section>
             <h2>Status messages</h2>

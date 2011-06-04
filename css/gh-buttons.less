@@ -1,0 +1,323 @@
+/* ------------------------------------------
+CSS3 GITHUB BUTTONS (Nicolas Gallagher)
+Licensed under Unlicense
+http://github.com/necolas/css3-github-buttons
+------------------------------------------ */
+
+
+/* ------------------------------------------------------------------------------------------------------------- BUTTON */
+
+.gh-normal-icon {
+    color:black;
+    position: relative;
+    top: 2px;
+    font-family: "IconicStroke";
+    font-size: 160%;
+    line-height: 9px;
+    margin-right: 5px;
+    margin-left: -4px;
+}
+
+.gh-big-icon {
+    color:black;
+    position: relative;
+    top: 6px;
+    font-family: "IconicStroke";
+    font-size: 160%;
+    line-height: 9px;
+    margin-right: 5px;
+    margin-left: -4px;
+}
+
+.button {
+    position: relative;
+    overflow: visible;
+    display: inline-block;
+    padding: 0.5em 1em;
+    border: 1px solid #d4d4d4;
+    margin: 0;
+    text-decoration: none;
+    text-shadow: 1px 1px 0 #fff;
+    font:11px/normal sans-serif;
+    color: #333;
+    white-space: nowrap;
+    cursor: pointer;
+    outline: none;
+    background-color: #ececec;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f4f4f4), to(#ececec));
+    background-image: -moz-linear-gradient(#f4f4f4, #ececec);
+    background-image: -o-linear-gradient(#f4f4f4, #ececec);
+    background-image: linear-gradient(#f4f4f4, #ececec);
+    -webkit-background-clip: padding;
+    -moz-background-clip: padding;
+    -o-background-clip: padding-box;
+    /*background-clip: padding-box;*/ /* commented out due to Opera 11.10 bug */
+    -webkit-border-radius: 0.2em;
+    -moz-border-radius: 0.2em;
+    border-radius: 0.2em;
+    /* IE hacks */
+    zoom: 1;
+    *display: inline;
+
+
+    &:hover, &:focus, &:active, .active {
+        border-color: #3072b3;
+        border-bottom-color: #2a65a0;
+        text-decoration: none;
+        text-shadow: -1px -1px 0 rgba(0,0,0,0.3);
+        color: #fff;
+        background-color: #3C8DDE;
+        background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#599bdc), to(#3072b3));
+        background-image: -moz-linear-gradient(#599bdc, #3072b3);
+        background-image: -o-linear-gradient(#599bdc, #3072b3);
+        background-image: linear-gradient(#599bdc, #3072b3);
+    }
+
+    &:active, .active {
+        border-color: #2a65a0;
+        border-bottom-color: #3884CF;
+        background-color: #3072b3;
+        background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#3072b3), to(#599bdc));
+        background-image: -moz-linear-gradient(#3072b3, #599bdc);
+        background-image: -o-linear-gradient(#3072b3, #599bdc);
+        background-image: linear-gradient(#3072b3, #599bdc);
+    }
+
+    &::-moz-focus-inner {
+        padding: 0;
+        border: 0;
+    }
+
+    &.primary {
+        font-weight: bold;
+    }
+
+    &.danger {
+        color: #900;
+    }
+
+    &.danger {
+        &:hover, &:focus, &:active, &.active {
+            border-color: #b53f3a;
+            border-bottom-color: #a0302a;
+            color: #fff;
+            background-color: #dc5f59;
+            background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#dc5f59), to(#b33630));
+            background-image: -moz-linear-gradient(#dc5f59, #b33630);
+            background-image: -o-linear-gradient(#dc5f59, #b33630);
+            background-image: linear-gradient(#dc5f59, #b33630);
+        }
+
+        &:active, &.active {
+            border-color: #a0302a;
+            border-bottom-color: #bf4843;
+            background-color: #b33630;
+            background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#b33630), to(#dc5f59));
+            background-image: -moz-linear-gradient(#b33630, #dc5f59);
+            background-image: -o-linear-gradient(#b33630, #dc5f59);
+            background-image: linear-gradient(#b33630, #dc5f59);
+
+        }
+    }
+
+    &.pill {
+        -webkit-border-radius: 50em;
+        -moz-border-radius: 50em;
+        border-radius: 50em;
+    }
+
+    &.disable {
+        opacity: 0.5;
+    }
+
+    &.small {
+        font-size: 11px;
+        padding: 0.2em 0.5em;
+    }
+
+
+    &.huge {
+        font-size: 14px;
+    }
+
+    &.icon {
+        position: relative;
+        &:before {
+            .gh-normal-icon;
+        }
+        &.home:before {
+                content: '!';
+        }
+        
+        &.home:before { content: '!'; }
+        &.at:before { content: "@"; }
+        &.quote:before { content: '"'; }
+        &.quote-alt:before { content: "'"; }
+        &.arrow-up:before { content: "3"; }
+        &.arrow-right:before { content: "4"; }
+        &.arrow-bottom:before { content: "5"; }
+        &.arrow-left:before { content: "6"; }
+        &.arrow-up-alt:before { content: "#"; }
+        &.arrow-right-alt:before { content: "$"; }
+        &.arrow-bottom-alt:before { content: "%"; }
+        &.arrow-left-alt:before { content: "^"; }
+        &.move:before { content: "9"; }
+        &.move-vertical:before { content: "8"; }
+        &.move-horizontal:before { content: "7"; }
+        &.move-alt:before { content: "("; }
+        &.move-vertical-alt:before { content: "*"; }
+        &.move-horizontal-alt:before { content: "&"; }
+        &.cursor:before { content: ")"; }
+        &.plus:before { content: "+"; }
+        &.plus-alt:before { content: "="; }
+        &.minus:before { content: "-"; }
+        &.minus-alt:before { content: "_"; }
+        &.new-window:before { content: "1"; }
+        &.dial:before { content: "2"; }
+        &.lightbulb:before { content: "0"; }
+        &.link:before { content: "/"; }
+        &.image:before { content: "?"; }
+        &.article:before { content: ">"; }
+        &.read-more:before { content: "."; }
+        &.headphones:before { content: ","; }
+        &.equalizer:before { content: "<"; }
+        &.fullscreen:before { content: ":"; }
+        &.exit-fullscreen:before { content: ";"; }
+        &.spin:before { content: "["; }
+        &.spin-alt:before { content: "{"; }
+        &.moon:before { content: "]"; }
+        &.sun:before { content: "}"; }
+        &.map-pin:before { content: "\\"; }
+        &.pin:before { content: "|"; }
+        &.eyedropper:before { content: "~"; }
+        &.denied:before { content: "`"; }
+        &.calendar:before { content: "a"; }
+        &.calendar-alt:before { content: "A"; }
+        &.bolt:before { content: "b"; }
+        &.clock:before { content: "c"; }
+        &.document:before { content: "d"; }
+        &.book:before { content: "e"; }
+        &.book-alt:before { content: "E"; }
+        &.magnifying-glass:before { content: "f"; }
+        &.tag:before { content: "g"; }
+        &.heart:before { content: "h"; }
+        &.info:before { content: "i"; }
+        &.chat:before { content: "j"; }
+        &.chat-alt:before { content: "J"; }
+        &.key:before { content: "k"; }
+        &.unlocked:before { content: "l"; }
+        &.locked:before { content: "L"; }
+        &.mail:before { content: "m"; }
+        &.mail-alt:before { content: "M"; }
+        &.phone:before { content: "n"; }
+        &.box:before { content: "o"; }
+        &.pencil:before { content: "p"; }
+        &.pencil-alt:before { content: "P"; }
+        &.comment:before { content: "q"; }
+        &.comment-alt:before { content: "Q"; }
+        &.rss:before { content: "r"; }
+        &.star:before { content: "s"; }
+        &.trash:before { content: "t"; }
+        &.user:before { content: "u"; }
+        &.volume:before { content: "v"; }
+        &.mute:before { content: "V"; }
+        &.cog:before { content: "w"; }
+        &.cog-alt:before { content: "W"; }
+        &.x:before { content: "x"; }
+        &.x-alt:before { content: "X"; }
+        &.check:before { content: "y"; }
+        &.check-alt:before { content: "Y"; }
+        &.beaker:before { content: "z"; }
+        &.beaker-alt:before { content: "Z"; }
+        
+    }
+
+}
+
+.button-group {
+    display: inline-block;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    /* IE hacks */
+    zoom: 1;
+    *display: inline;
+}
+
+.button + .button,
+.button + .button-group,
+.button-group + .button,
+.button-group + .button-group {
+    margin-left: 15px;
+}
+
+.button-group li {
+    float: left;
+    padding: 0;
+    margin: 0;
+}
+
+.button-group .button {
+    float: left;
+    margin-left: -1px;
+}
+
+.button-group > .button:not(:first-child):not(:last-child),
+.button-group li:not(:first-child):not(:last-child) .button {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+
+.button-group > .button:first-child,
+.button-group li:first-child .button {
+    margin-left: 0;
+    -webkit-border-top-right-radius: 0;
+    -webkit-border-bottom-right-radius: 0;
+    -moz-border-radius-topright: 0;
+    -moz-border-radius-bottomright: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.button-group > .button:last-child,
+.button-group li:last-child > .button {
+    -webkit-border-top-left-radius: 0;
+    -webkit-border-bottom-left-radius: 0;
+    -moz-border-radius-topleft: 0;
+    -moz-border-radius-bottomleft: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+/* ............................................................................................................. Minor */
+
+.button-group.minor-group .button {
+    border: 1px solid #d4d4d4;
+    text-shadow: none;
+    background-image: none;
+    background-color: #fff;
+}
+
+.button-group.minor-group .button:hover,
+.button-group.minor-group .button:focus,
+.button-group.minor-group .button:active {
+    background-color: #599bdc;
+}
+
+.button-group.minor-group .button:active,
+.button-group.minor-group .button.active {
+    background-color: #3072b3;
+}
+
+.button-group.minor-group .button.icon:before {
+    opacity: 0.8;
+}
+
+/* ------------------------------------------------------------------------------------------------------------- BUTTON CONTAINER */
+/* For mixing buttons and button groups, e.g., in a navigation bar */
+
+.button-container .button,
+.button-container .button-group {
+    vertical-align: top;
+}
