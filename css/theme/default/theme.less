@@ -10,16 +10,21 @@ html {
 
 body {
     font-family: arial, sans-serif;
-    width: 1280px;
 }
 
-@media only screen and (min-width: 960px) and (max-width: 1279px) {
+@media only screen and (min-width: 1300px) {
+    body {
+        width: 1280px;
+    }
+}
+
+@media only screen and (min-width: 980px) and (max-width: 1299px) {
     body {
         width: 960px;
     }
 }
 
-@media only screen and (min-width: 0px) and (max-width: 959px) {
+@media only screen and (min-width: 0px) and (max-width: 979px) {
     body {
         width: 640px;
     }
@@ -167,6 +172,13 @@ body > footer {
         vertical-align: top;
 
         // border: 1px solid @dark1;
+    }
+    textarea {
+        width: 295px;
+    }
+
+    textarea.wide {
+        width: 475px;
     }
 
     input[type=submit] {

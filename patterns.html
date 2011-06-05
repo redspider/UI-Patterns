@@ -150,28 +150,52 @@
             </p>
             <form class="form">
                 <fieldset>
-                    <legend>Form legend</legend>
-                    <ul class="errors">
-                        <li>You have an error in <span class="field-label">text field</span></li>
-                    </ul>
                     <div class="element">
-                        <label for="input1">text field</label>
-                        <input id="input1" type="text" />
+                        <label for="input_username">Username</label>
+                        <input id="input_username" type="text"/>
+                        <span class="error">You must enter a username, even though we will ignore it</span>
+                        <span class="hint">No matter what you put in this box, we will assign you the username <strong>sparky1998</strong></span>
                     </div>
                     <div class="element">
-                        <label for="input2">text field</label>
-                        <input id="input2" type="text" />
-                        <span class="hint">hint for this field</span>
+                        <label for="input_email">Email address</label>
+                        <input id="input_email" type="text" size="30"/>
+                        <span class="hint">No matter what you put in this box, we will assign you the username <strong>sparky1998</strong></span>
                     </div>
+                    <div class="element">
+                        <label for="input_password">Password</label>
+                        <input id="input_password" type="text"/>
+                        <span class="error">You must enter a username, even though we will ignore it</span>
+                    </div>
+                    <div class="element">
+                        <label for="input_confirm_password">Confirm password</label>
+                        <input id="input_confirm_password" type="text"/>
+                    </div>
+                    <div class="element">
+                        <label for="input_source">Where did you hear about us?</label>
+                        <select id="source">
+                            <option class="prompt">Please select an option</option>
+                            <option>Voices in my head</option>
+                            <option>My cat told me</option>
+                            <option>Mis-typed URL</option>
+                            <option>Confused affiliate network</option>
+                            <option>Other</option>
+                        </select>
+                        <span class="hint">Please select a racecourse</span>
+                    </div>
+                    <div class="element reverse">
+                        <input type="checkbox" id="input_tnc"/>
+                        <label for="input_tnc">I agree with the terms and conditions</label>
+                    </div>
+                    <div class="element">
+                        <label for="input_textarea">Tell us about your mother</label>
+                        <textarea id="input_textarea"></textarea>
+                    </div>
+                    <div class="element">
+                        <label for="input_textarea2">Tell us about your other mother</label>
+                        <textarea class="wide" id="input_textarea2"></textarea>
+                    </div>
+                    <button class="button primary icon check">Save</button>
 
-                    <div class="element error">
-                        <label for="input2">text field</label>
-                        <input id="input2" type="text" />
-                    </div>
-
-                    <div class="controls">
-                        <input class="button" type="submit" value="Save" />
-                    </div>
                 </fieldset>
             </form>
         </section>
@@ -299,26 +323,6 @@
 
         <section>
             <h2>Image with placeholder</h2>
-        </section>
-
-        <section>
-            <h2>Menu page</h2>
-            <h3>1280</h3>
-            <iframe style="width:1280px; height: 960px" src="page_menu.html"></iframe>
-            <h3>1024</h3>
-            <iframe style="width:1024px; height: 800px" src="page_menu.html"></iframe>
-            <h3>960</h3>
-            <iframe style="width:960px; height: 640px" src="page_menu.html"></iframe>
-            <h3>640</h3>
-            <iframe style="width:640px; height: 960px" src="page_menu.html"></iframe>
-        </section>
-
-        <section>
-            <h2>Sub-menu page</h2>
-            <h3>1280</h3>
-            <h3>1024</h3>
-            <h3>960</h3>
-            <h3>640</h3>
         </section>
 
 
