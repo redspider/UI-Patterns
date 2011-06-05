@@ -1,0 +1,118 @@
+
+/* Colors */
+@page_background: #2a65a0;
+@body_background: white;
+@primary: #444444;
+@secondary: #2a65a0;
+@error: #cc3300;
+@ok: lighten(#2a65a0,50%);
+
+
+// Needs updating
+@ok_bg: #a6cd3c;
+@ok_fg: black;
+@warn_bg: #fcc31a;
+@warn_fg: black;
+@error_bg: #d73526;
+@error_fg: white;
+
+
+@text_dim: #777;
+
+/* Derived colours */
+@primary_start: lighten(@primary,70%);
+@primary_end: lighten(@primary,60%);
+
+@secondary_start: lighten(@secondary,20%);
+@secondary_end: lighten(@secondary,0%);
+
+@error_start: lighten(@error,10%);
+@error_end: lighten(@error,0%);
+
+
+@status_ok_bg: @ok_bg;
+@status_ok_fg: @ok_fg;
+
+@status_warn_bg: @warn_bg;
+@status_warn_fg: @warn_fg;
+
+@status_error_bg: @error_bg;
+@status_error_fg: @error_fg;
+
+
+
+/* Colors */
+@page_background: #2a65a0;
+@body_background: white;
+
+
+/* Concept colors */
+@ok_bg: lighten(#2a65a0,20%);
+@ok_fg: black;
+@warn_bg: #dd6503;
+@warn_fg: white;
+@error_bg: #dd6503;
+@error_fg: white;
+
+@text_dim: #777;
+
+@link_color: #333333;
+
+
+/* Status */
+@status_note_bg: lighten(@ok_bg,20%);
+@status_note_fg: @ok_fg;
+
+@status_ok_bg: @ok_bg;
+@status_ok_fg: @ok_fg;
+
+@status_warn_bg: @warn_bg;
+@status_warn_fg: @warn_fg;
+
+@status_error_bg: @error_bg;
+@status_error_fg: @error_fg;
+
+/* Buttons */
+@button_bg: #f4f4f4;
+@button_fg: black;
+@button_border: #d4d4d4;
+@button_text_shadow: #fcfcfc;
+
+@button_hover_bg: lighten(#2a65a0,20%);
+@button_hover_fg: white;
+@button_hover_border: #3072b0;
+@button_hover_text_shadow: darken(@button_hover_bg, 20%);
+
+@button_danger_text: #dd0000;
+@button_danger_bg: #dc5f59;
+@button_danger_fg: white;
+@button_danger_border: #b53f3a;
+@button_danger_text_shadow: darken(@button_danger_bg, 20%);
+
+
+@button_start: @button_bg;
+@button_end: darken(@button_bg, 5%);
+
+@button_hover_start: @button_hover_bg;
+@button_hover_end: darken(@button_hover_bg, 20%);
+
+@button_danger_start: @button_danger_bg;
+@button_danger_end: darken(@button_danger_bg, 20%);
+
+/* Tables */
+
+@table_header_bg: #333;
+@table_header_fg: white;
+@table_row_alt: #f7f7f7;
+
+/* Popups */
+
+@popup_header_bg: #333;
+@popup_header_fg: white;
+
+/* Form */
+
+@form_error_bg: @error_bg;
+@form_error_fg: @error_fg;
+@form_hint: #777;
+@form_label: #333;

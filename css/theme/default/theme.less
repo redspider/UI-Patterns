@@ -1,4 +1,4 @@
-@import "config";
+@import "config-blue-orange";
 
 
 
@@ -31,7 +31,7 @@ body {
 }
 
 a {
-    color: @primary;
+    color: @link_color;
 }
 
 /* Header */
@@ -87,21 +87,20 @@ body > footer {
 }
 
 .button {
-    border: 1px solid #d4d4d4;
-    text-shadow: 1px 1px 0 #fff;
+    border: 1px solid @button_border;
+    text-shadow: 1px 1px 0 @button_text_shadow;
     font:11px/normal sans-serif;
-    color: #333;
-    .simple_gradient(@primary_start, @primary_end);
+    color: @button_fg;
+    .simple_gradient(@button_start, @button_end);
     .border-radius(0.2em);
 
 
     &:hover, &:focus, &:active, &.active {
-        border-color: lighten(@secondary,0%);
-        border-bottom-color: lighten(@secondary, 10%);
+        border-color: @button_hover_border;
         text-decoration: none;
-        text-shadow: -1px -1px 0 rgba(0,0,0,0.3);
-        color: #fff;
-        .simple_gradient(@secondary_start, @secondary_end);
+        text-shadow: -1px -1px 0 @button_hover_text_shadow;
+        color: @button_hover_fg;
+        .simple_gradient(@button_hover_start, @button_hover_end);
     }
 
     &.primary {
@@ -109,15 +108,16 @@ body > footer {
     }
 
     &.danger {
-        color: @error;
+        color: @button_danger_text;
     }
 
     &.danger {
         &:hover, &:focus, &:active, &.active {
-            border-color: lighten(@error, 0%);
-            border-bottom-color: lighten(@error, 10%);
-            color: #fff;
-            .simple_gradient(@error_start, @error_end);
+            border-color: @button_danger_border;
+            text-decoration: none;
+            text-shadow: -1px -1px 0 @button_danger_text_shadow;
+            color: @button_danger_fg;
+            .simple_gradient(@button_danger_start, @button_danger_end);
         }
     }
 }
@@ -138,7 +138,12 @@ body > footer {
 }
 
 .status.note {
-    background-color: @ok;
+    background-color: @status_note_bg;
+    color: @status_note_fg;
+
+    a {
+        color: @status_note_fg;
+    }
 
     &:before {
         .status-normal-icon;
@@ -148,7 +153,13 @@ body > footer {
 }
 
 .status.success {
-    background-color: @ok;
+    background-color: @status_ok_bg;
+    color: @status_ok_fg;
+
+    a {
+        color: @status_ok_fg;
+    }
+
     &:before {
         .status-normal-icon;
         content: "y";
@@ -156,10 +167,11 @@ body > footer {
 
 }
 .status.warning {
-    background-color: @error;
-    color: white;
+    background-color: @status_warn_bg;
+    color: @status_warn_fg;
+
     a {
-        color: #ddd;
+        color: @status_warn_fg;
     }
     &:before {
         .status-normal-icon;
@@ -167,11 +179,12 @@ body > footer {
     }
 }
 .status.error {
-    background-color: @error;
-    color: white;
+    background-color: @status_error_bg;
+    color: @status_error_fg;
+
     font-weight: bold;
     a {
-        color: #ddd;
+        color: @status_error_fg;
     }
     &:before {
         .status-normal-icon;
@@ -182,19 +195,19 @@ body > footer {
 
 /* Table */
 .data-table {
-    border: 1px solid @primary;
+    border: 1px solid @table_header_bg;
 
     th {
-        background-color: @primary;
-        color: white;
+        background-color: @table_header_bg;
+        color: @table_header_fg;
     }
 
     tr:nth-child(even) {
-        background-color: lighten(@primary, 60%);
+        background-color: lighten(@table_row_alt, 60%);
     }
 
     td {
-        border-right: 1px solid @primary;
+        border-right: 1px solid @table_header_bg;
     }
 }
 
@@ -206,7 +219,7 @@ body > footer {
         text-align: left;
         display: inline-block;
         font: 12px/bold sans-serif;
-        color: #333333;
+        color: @form_label;
         vertical-align: top;
         float: left;
     }
@@ -241,25 +254,20 @@ body > footer {
         margin-left: 0px;
         margin-top: 2px;
         font: 11px/normal sans-serif;
-        color: @text_dim;
+        color: @form_hint;
         width: 295px;
         text-align: left;
     }
 
     .element .error {
-        color: white;
-        background-color: @error;
+        color: @form_error_fg;
+        background-color: @form_error_bg;
         padding: 6px;
         display: inline-block;
         width: 289px;
         text-align: left;
         font: 11px/normal sans-serif;
         font-weight: bold;
-    }
-
-    .errors {
-        background-color: @error;
-        color: white;
     }
 
     .element {
@@ -294,8 +302,8 @@ body > footer {
         left: 0px;
         .border-radius-top(4px);
         //width: 310px;
-        background-color: @primary;
-        color: white;
+        background-color: @popup_header_bg;
+        color: @popup_header_fg;
         font-weight: bold;
         padding: 5px;
         border-bottom:  1px solid black;
