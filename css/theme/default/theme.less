@@ -29,6 +29,11 @@ body {
         width: 640px;
     }
 }
+
+a {
+    color: @primary;
+}
+
 /* Header */
 
 body > header {
@@ -119,20 +124,60 @@ body > footer {
 
 
 /* Status */
+.status-normal-icon {
+    display: inline-block;
+    position: relative;
+    top: 2px;
+    width: 16px;
+    text-align: left;
+    font-family: "IconicStroke";
+    font-size: 160%;
+    line-height: 9px;
+    margin-right: 5px;
+    margin-left: 10px;
+}
+
 .status.note {
     background-color: @ok;
+
+    &:before {
+        .status-normal-icon;
+        content: "0";
+    }
+
 }
+
 .status.success {
     background-color: @ok;
+    &:before {
+        .status-normal-icon;
+        content: "y";
+    }
+
 }
 .status.warning {
     background-color: @error;
     color: white;
+    a {
+        color: #ddd;
+    }
+    &:before {
+        .status-normal-icon;
+        content: "i";
+    }
 }
 .status.error {
     background-color: @error;
     color: white;
-    font-weight: bold
+    font-weight: bold;
+    a {
+        color: #ddd;
+    }
+    &:before {
+        .status-normal-icon;
+        content: "x";
+    }
+
 }
 
 /* Table */
